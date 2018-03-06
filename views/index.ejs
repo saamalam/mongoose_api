@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+
+       <h1> May Node and Express be with you.</h1>
+
+
+        <table class="posts">
+            <tr>
+                    <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Content</th>
+            </tr>
+        <% for(var i=0; i<posts.length; i++) {%>
+          <tr class="post">
+              <td><%= posts[i]._id %></td>
+           <td> <span><%= posts[i].title %></span></td>
+           <td>  <span><%= posts[i].author %></span></td>
+           <td>  <span><%= posts[i].body %></span></td>
+          </tr>
+        <% } %>
+        </table>
+
+    <h1>Forms</h1>
+    <form action="/articles" method="POST">
+        <input type="text" placeholder="Post Title" name="title">
+        <input type="text" placeholder="Author Name" name="author">       
+        <textarea name="body">
+
+        </textarea>
+        <button type="submit">Submit</button>
+      </form>
+   
+    
+</body>
+</html>
